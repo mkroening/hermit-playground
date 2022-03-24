@@ -84,9 +84,9 @@ function(build_external NAME PATH DEPENDS)
 		BUILD_ALWAYS 1
 		DEPENDS ${DEPENDS}
 		INSTALL_COMMAND
+			DESTDIR=${LOCAL_PREFIX_BASE_DIR}
 			${CMAKE_COMMAND} --build <BINARY_DIR>
-			                 --target install --
-			                   DESTDIR=${LOCAL_PREFIX_BASE_DIR}
+			                 --target install
 		CMAKE_ARGS
 			-DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
 			-DLOCAL_PREFIX_BASE_DIR=${LOCAL_PREFIX_BASE_DIR}
