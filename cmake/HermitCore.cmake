@@ -62,7 +62,7 @@ set(HERMIT_KERNEL_INCLUDES
 if(BOOTSTRAP)
 	enable_language(C CXX)
 else()
-	enable_language(C CXX Fortran Go)
+	enable_language(C CXX)
 endif()
 
 include(${CMAKE_CURRENT_LIST_DIR}/HermitCore-Paths.cmake)
